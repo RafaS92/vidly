@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
 class LoginForm extends Component {
+  username = React.createRef();
+
   handleSubmit = (e) => {
     e.prevenDefault();
-    console.log("eso perro");
+
+    const username = this.username.current.value;
   };
 
   render() {
@@ -14,6 +17,7 @@ class LoginForm extends Component {
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <input
+              ref={this.username}
               type="text"
               className="form-control"
               id="username"
