@@ -4,12 +4,20 @@ import Input from "./common/input";
 class LoginForm extends Component {
   state = {
     account: { username: " ", password: "" },
+    errors: {},
+  };
+
+  validate = () => {
+    return { username: "Username is required." };
   };
 
   handleSubmit = (e) => {
     e.prevenDefault();
 
-    // const username = this.username.current.value;
+    const errors = this.validate();
+    this.setState({ errors });
+    if (errors) return;
+    console.log("hey perro");
   };
 
   handleChange = ({ currentTarget: input }) => {
