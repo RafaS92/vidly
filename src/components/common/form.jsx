@@ -44,7 +44,7 @@ class Form extends Component {
     this.setState({ data, errors });
   };
 
-  renderButtom(label) {
+  renderButton(label) {
     return (
       <button
         type="submit"
@@ -56,11 +56,11 @@ class Form extends Component {
     );
   }
 
-  renderInput(name, label,type = "text") {
+  renderInput(name, label, type = "text") {
     const { data, errors } = this.state;
     return (
       <Input
-      type={type}
+        type={type}
         name={name}
         value={data[name]}
         label={label}
