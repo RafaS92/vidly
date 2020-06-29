@@ -3,7 +3,6 @@ import { getMovie, saveMovie } from "./services/fakeMovieService";
 import { getGenres } from "./services/fakeGenreService";
 import Form from "./common/form";
 import Joi from "joi-browser";
-import { number } from "prop-types";
 
 class MovieForm extends Form {
   state = {
