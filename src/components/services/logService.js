@@ -1,16 +1,10 @@
+function init() {}
 
-
-function init(){
-
-
+function log(error) {
+  console.error(error);
 }
 
-function log(error){
-    console.error(error)
-
-}
-
-exoirt default{
-    init,
-    log
-}
+export default {
+  init,
+  log,
+};
