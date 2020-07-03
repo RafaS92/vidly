@@ -1,6 +1,5 @@
 import http from "./httpService";
 import { apiUrl } from "../config.json";
-import { isError } from "lodash";
 
 const apiEndpoint = apiUrl + "/users";
 
