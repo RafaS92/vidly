@@ -9,8 +9,8 @@ class MovieForm extends Form {
     data: {
       title: "",
       genreId: "",
-      numberInStock: "",
-      dailyRentalRate: "",
+      numberInStock: 0,
+      dailyRentalRate: 0,
     },
     genres: [],
     errors: {},
@@ -65,8 +65,8 @@ class MovieForm extends Form {
     };
   }
 
-  doSubmit = () => {
-    saveMovie(this.state.data);
+  doSubmit = async () => {
+    await saveMovie(this.state.data);
     this.props.history.push("/movies");
   };
 
@@ -87,17 +87,3 @@ class MovieForm extends Form {
 }
 
 export default MovieForm;
-
-// const MovieForm = ({ match, history }) => {
-//   return (
-//     <div>
-//       <h1>Movie Form {match.params.id}</h1>;
-//       <button
-//         className="btn btn-primary"
-//         onClick={() => history.push("/movies")}
-//       >
-//         Save
-//       </button>
-//     </div>
-//   );
-// };
