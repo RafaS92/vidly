@@ -28,14 +28,15 @@ class MoviesTable extends Component {
     },
     {
       key: "delete",
-      content: (movie) => (
-        <button
-          onClick={() => this.props.onDelete(movie)}
-          className="btn btn-danger btn-sm"
-        >
-          Delete
-        </button>
-      ),
+      content: (movie) =>
+        this.props.user && (
+          <button
+            onClick={() => this.props.onDelete(movie)}
+            className="btn btn-danger btn-sm"
+          >
+            Delete
+          </button>
+        ),
     },
   ];
   render() {
