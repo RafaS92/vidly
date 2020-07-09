@@ -14,7 +14,7 @@ class Movies extends Component {
   state = {
     movies: [],
     genres: [],
-    pageSize: 8,
+    pageSize: 19,
     currentPage: 1,
     searchQuery: null,
     selectedGenre: null,
@@ -78,6 +78,7 @@ class Movies extends Component {
     } = this.state;
 
     let filtered = allMovies;
+
     if (searchQuery)
       filtered = allMovies.filter((m) =>
         m.title.toLowerCase().startsWith(searchQuery.toLowerCase())
@@ -94,12 +95,7 @@ class Movies extends Component {
 
   render() {
     const { length: count } = this.state.movies;
-    const {
-      pageSize,
-      currentPage,
-
-      sortColumn,
-    } = this.state;
+    const { pageSize, currentPage, sortColumn } = this.state;
     const { user } = this.props;
 
     if (count === 0) return <p>There are no movies in the database.</p>;
