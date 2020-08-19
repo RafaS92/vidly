@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const NavBar = ({ user }) => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-light bg-warning">
         <Link className="navbar-brand" to="/">
           Vidly
         </Link>
